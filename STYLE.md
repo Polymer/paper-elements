@@ -11,7 +11,7 @@
   * [Function Declarations](#function-declarations)
 
 
-### Decisions to Make:
+### Decisions to Make
 
 * // Do styles live in a `<style>` element or in a .css file?
 * Should we have guidelines around method complexity? That is, what level of complexity must be
