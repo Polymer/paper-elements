@@ -65,47 +65,53 @@
 
 * Hide class-private data inside a function scope
 
-      (function() {
+  ```js
+  (function() {
 
-        var DEFAULT_NAME = "Georgia";
+    var DEFAULT_NAME = "Georgia";
 
-        Polymer({
+    Polymer({
 
-          is: "x-name",
+      is: "x-name",
 
-          ready: function() {
-            this.name = DEFAULT_NAME;
-          }
+      ready: function() {
+        this.name = DEFAULT_NAME;
+      }
 
-        });
+    });
 
-      }());
+  }());
+  ```
 * **[pending]** Run all JavaScript in ES5 strict mode. For Polymer elements that means wrapping them
   in a function scope and adding the `‘use strict’;` statement.
 
-      (function() {
+  ```js
+  (function() {
 
-        ‘use strict’;
+    'use strict';
 
-        ...
+    ...
 
-      }());
+  }());
+  ```
 * Prefix instance-private data with an underscore (“_”). Identifiers prefixed with an underscore
   should not be considered part of an element’s API.
 
-      Polymer({
+  ```js
+  Polymer({
 
-        is: “x-element”,
+    is: "x-element",
 
-        listener: function() {},
+    listener: function() {},
 
-        ready: function() {
-          // `_boundListener` is "private". Renaming between
-          // between releases is fine.
-          this._boundListener = this.listener.bind(this);
-        }
+    ready: function() {
+      // `_boundListener` is "private". Renaming between
+      // between releases is fine.
+      this._boundListener = this.listener.bind(this);
+    }
 
-      });
+  });
+  ```
 
 
 ### Repositories
@@ -128,106 +134,130 @@
 * `<dom-module id="element-name">` wrapper for templates over a `<template>` preceding a `<script>`
   element
 
-      <dom-module id="cat-face">
+  ```html
+  <dom-module id="cat-face">
 
-        <template>
-        </template>
+    <template>
+    </template>
 
-      </dom-module>
+  </dom-module>
 
-      <script>
+  <script>
 
-        Polymer({
+    Polymer({
 
-          is: "cat-face"
+      is: "cat-face"
 
-        });
+    });
 
-      </script>
+  </script>
+  ```
 * Prefer template (declarative) property binding where possible over setting properties imperatively
 
-      <x-foo bar="{{baz}}"></x-foo>
+  ```html
+  <x-foo bar="{{baz}}"></x-foo>
+  ```
 
   instead of
 
-      <x-foo id="foo"></x-foo>
-      …
-      this.$.foo.bar = this.baz;
+  ```html
+  <x-foo id="foo"></x-foo>
+    <!-- … -->
+  this.$.foo.bar = this.baz;
+  ```
 
 
 ### Whitespace / Indentation
 
 * Use single quotes for strings in JavaScript
 
-      var blah = 'foo';
+  ```js
+  var blah = 'foo';
+  ```
 * Use double quotes for attribute values in HTML
 
-      <x-blah foo="baz"></x-blah>
+  ```html
+  <x-blah foo="baz"></x-blah>
+  ```
 * No line break at the top of files
 * 2 spaces for indentation
 * Content for every tag except `<head>` and `<body>` is indented one level
 
-      <html>
+  ```html
+  <html>
 
-      <head>
-        /* something */
-      </head>
-      <body>
-        /* something else */
-      </body>
+  <head>
+    /* something */
+  </head>
+  <body>
+    /* something else */
+  </body>
 
-      </html>
+  </html>
+  ```
 
   and
 
-      <script>
+  ```html
+  <script>
 
-        (function() {
-          Polymer(...);
-        })();
+    (function() {
+      Polymer(...);
+    })();
 
-      </script>
+  </script>
+  ```
 * No spaces inside bindings
 
-      <div foo="{{bar}}"></div>
-      <section bar="[[baz]]"></section>
+  ```html
+  <div foo="{{bar}}"></div>
+  <section bar="[[baz]]"></section>
+  ```
 * Line breaks between methods in object passed to Polymer()
 
-      Polymer({
+  ```js
+  Polymer({
 
-        created: function() {},
+    created: function() {},
 
-        ready: function() {}
+    ready: function() {}
 
-      });
+  });
+  ```
 * Line breaks between style blocks
 
-      .panel {
-        padding: 10px;
-      }
+  ```css
+  .panel {
+    padding: 10px;
+  }
 
-      .panel-puffy {
-        padding: 20px;
-      }
+  .panel-puffy {
+    padding: 20px;
+  }
+  ```
 * Internal leading and trailing line breaks for top-level elements (<dom-module>, <style>, <script>,
   <html>, <head>, <body>)
 
-      <dom-module id=”foo-element”>
+  ```html
+  <dom-module id=”foo-element”>
 
-        <template>
-          <h3>Buenos dias</h3>
-        </template>
+    <template>
+      <h3>Buenos dias</h3>
+    </template>
 
-      </dom-module>
+  </dom-module>
+  ```
 * 100 columns for line breaks
 * When breaking a long HTML tag, expand attributes, and indent by 4
 
-      <some-element
-          foo="really really long value"
-          bar="{{bar}}"
-          baz="some other really long value">
-        <div>Has child elements too</div>
-      </some-element>
+  ```html
+  <some-element
+      foo="really really long value"
+      bar="{{bar}}"
+      baz="some other really long value">
+    <div>Has child elements too</div>
+  </some-element>
+  ```
 * Files end with new lines
 * No whitespace at the end of lines
 
@@ -237,6 +267,8 @@
 * No spaces between `function` keyword or function/method name and argument list
 * Opening brace on the same line as the function signature
 
-      function(arg1, arg2, arg3) {
-        var foo = 1;
-      }
+  ```js
+  function(arg1, arg2, arg3) {
+    var foo = 1;
+  }
+  ```
