@@ -7,8 +7,8 @@
   * [Imports](#imports)
   * [Modules](#modules)
   * [Repositories](#repositories)
-  * [Whitespace / Indentation](#whitespaceindentation)
-  * [Function Declarations](#functiondeclarations)
+  * [Whitespace / Indentation](#whitespace--indentation)
+  * [Function Declarations](#function-declarations)
 
 
 ### Decisions to Make:
