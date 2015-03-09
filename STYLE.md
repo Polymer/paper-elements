@@ -1,7 +1,17 @@
-# Polymer Elements Design Guide
+# Polymer Elements Style Guide
+
+* [Decisions to Make](#decisions-to-make)
+* [Guidelines](#guidelines)
+  * [Custom Elements](#custom-elements)
+  * [Function/Attribute/Identifier/Event Naming](#functionattributeidentifierevent-naming)
+  * [Imports](#imports)
+  * [Modules](#modules)
+  * [Repositories](#repositories)
+  * [Whitespace / Indentation](#whitespaceindentation)
+  * [Function Declarations](#functiondeclarations)
 
 
-### Decisions to make:
+### Decisions to Make:
 
 * // Do styles live in a `<style>` element or in a .css file?
 * Should we have guidelines around method complexity? That is, what level of complexity must be
