@@ -56,9 +56,11 @@
   * Second, group alphabetically by `href`. Optionally add line breaks between components in
     different directories (all “awesome”, linebreak, all “gnarly”)
 
-          <link rel="import" href="components/awesome/foo-baz.html">
-          <link rel="import" href="components/gnarly/baz-foo.html">
-          <link rel="import" href="components/gnarly/foo-baz.html">
+    ```html
+    <link rel="import" href="components/awesome/foo-baz.html">
+    <link rel="import" href="components/gnarly/baz-foo.html">
+    <link rel="import" href="components/gnarly/foo-baz.html">
+    ```
 
 
 ### Modules
