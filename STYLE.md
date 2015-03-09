@@ -213,7 +213,7 @@
   <div foo="{{bar}}"></div>
   <section bar="[[baz]]"></section>
   ```
-* Line breaks between methods in object passed to Polymer()
+* Line breaks between methods in object passed to `Polymer()`
 
   ```js
   Polymer({
@@ -235,8 +235,8 @@
     padding: 20px;
   }
   ```
-* Internal leading and trailing line breaks for top-level elements (<dom-module>, <style>, <script>,
-  <html>, <head>, <body>)
+* Internal leading and trailing line breaks for top-level elements (`<dom-module>`, `<style>`,
+  `<script>`, `<html>`, `<head>`, `<body>`)
 
   ```html
   <dom-module id=”foo-element”>
